@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 @main
-struct Personal_Relationship_ManagementApp: App {
+struct Personal_Relationship_ManagementApp: SwiftUI.App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainWindowTabs()
+                .environment(\.realmConfiguration, RealmHelper.configuration)
+            #if DEBUG
+                .onAppear(perform: RealmHelper.printRealmLocation)
+            #endif
         }
     }
 }
