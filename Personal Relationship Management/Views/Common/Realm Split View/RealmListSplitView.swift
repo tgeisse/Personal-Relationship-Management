@@ -41,10 +41,8 @@ struct RealmListSplitView<RealmObject: Object & Identifiable, Sidebar: View, Det
             listView
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
+                        PlusButton {
                             addScreenPresented.toggle()
-                        } label: {
-                            Image(systemName: "plus")
                         }
                         .sheet(isPresented: $addScreenPresented, content: addForm)
                     }
@@ -55,7 +53,7 @@ struct RealmListSplitView<RealmObject: Object & Identifiable, Sidebar: View, Det
     }
     
     private var listView: some View {
-        RealmList(pluralTitle: pluralTitle,
+        RealmListOld(pluralTitle: pluralTitle,
                   selectedItem: $selectedItem,
                   rowView: listRowView)
     }

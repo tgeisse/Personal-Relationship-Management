@@ -13,7 +13,7 @@ struct RealmHelper {
     }
     
     static var configuration: Realm.Configuration {
-        Realm.Configuration(schemaVersion: 3, migrationBlock: migrationBlock)
+        Realm.Configuration(schemaVersion: 4, migrationBlock: migrationBlock)
     }
     
     static func printRealmLocation() {

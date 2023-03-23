@@ -41,10 +41,8 @@ struct RealmListSplitViewWithFavorites<RealmObject: Object & Identifiable & CanB
             listView
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
+                        PlusButton {
                             addScreenPresented.toggle()
-                        } label: {
-                            Image(systemName: "plus")
                         }
                         .sheet(isPresented: $addScreenPresented, content: addForm)
                     }

@@ -8,7 +8,7 @@
 import SwiftUI
 import RealmSwift
 
-struct RealmList<RealmObject: Object & Identifiable, RowView: View>: View {
+struct RealmListOld<RealmObject: Object & Identifiable, RowView: View>: View {
     @ObservedResults(RealmObject.self) var listItems
     
     var pluralTitle: String
@@ -31,9 +31,9 @@ struct RealmList<RealmObject: Object & Identifiable, RowView: View>: View {
 }
 
 #if DEBUG
-struct RealmList_Previews: PreviewProvider {
+struct RealmListOld_Previews: PreviewProvider {
     static var previews: some View {
-        RealmList(pluralTitle: "Contacts",
+        RealmListOld(pluralTitle: "Contacts",
                   selectedItem: .constant(nil),
                   rowView: { (c: Contact) in Text(c.fullName) })
     }

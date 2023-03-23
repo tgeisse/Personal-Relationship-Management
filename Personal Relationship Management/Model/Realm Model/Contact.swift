@@ -8,10 +8,11 @@
 import Foundation
 import RealmSwift
 
-class Contact: Object, CanBeFavorited {
+@objcMembers class Contact: Object, CanBeFavorited {
     @Persisted(primaryKey: true) var _id: ObjectId
     @Persisted var firstName = ""
     @Persisted var lastName = ""
+    @Persisted var notes = ""
     @Persisted var isFavorite = false
     @Persisted var addresses = List<Address>()
     @Persisted var phoneNumbers = List<PhoneNumber>()

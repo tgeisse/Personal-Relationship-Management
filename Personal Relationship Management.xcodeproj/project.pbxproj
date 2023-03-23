@@ -29,7 +29,7 @@
 		346BC73129C90BF400854BC9 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC73029C90BF400854BC9 /* ContactView.swift */; };
 		346BC73529C90DE000854BC9 /* ContactListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC73429C90DE000854BC9 /* ContactListItem.swift */; };
 		346BC73A29C95A5200854BC9 /* RealmListSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC73929C95A5200854BC9 /* RealmListSplitView.swift */; };
-		346BC73C29C9625D00854BC9 /* RealmList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC73B29C9625D00854BC9 /* RealmList.swift */; };
+		346BC73C29C9625D00854BC9 /* RealmListOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC73B29C9625D00854BC9 /* RealmListOld.swift */; };
 		346BC73E29C965AE00854BC9 /* CanBeFavorited.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC73D29C965AE00854BC9 /* CanBeFavorited.swift */; };
 		346BC74029C9668F00854BC9 /* RealmListFavoriteGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC73F29C9668F00854BC9 /* RealmListFavoriteGroup.swift */; };
 		346BC74229C9719500854BC9 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC74129C9719500854BC9 /* RealmHelper.swift */; };
@@ -42,6 +42,15 @@
 		346BC75129CA1E0500854BC9 /* DebugUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC75029CA1E0500854BC9 /* DebugUtil.swift */; };
 		346BC75429CA1E4E00854BC9 /* RealmObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC75329CA1E4E00854BC9 /* RealmObjectExtension.swift */; };
 		346BC75729CA2AD300854BC9 /* FormMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC75629CA2AD300854BC9 /* FormMode.swift */; };
+		346BC75A29CB5B5200854BC9 /* DetailViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC75929CB5B5200854BC9 /* DetailViewText.swift */; };
+		346BC75C29CB604800854BC9 /* DetailViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC75B29CB604800854BC9 /* DetailViewList.swift */; };
+		346BC75E29CB681E00854BC9 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC75D29CB681E00854BC9 /* PlusButton.swift */; };
+		346BC76029CB8EDF00854BC9 /* DetailViewDatedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC75F29CB8EDF00854BC9 /* DetailViewDatedList.swift */; };
+		346BC76229CB904200854BC9 /* DateAndDateFormatterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC76129CB904200854BC9 /* DateAndDateFormatterExtensions.swift */; };
+		346BC76429CB906A00854BC9 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC76329CB906A00854BC9 /* DateFormat.swift */; };
+		346BC76629CBCBC000854BC9 /* DetailViewActivityEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC76529CBCBC000854BC9 /* DetailViewActivityEventView.swift */; };
+		346BC76C29CCC54700854BC9 /* RealmListGrouped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC76B29CCC54700854BC9 /* RealmListGrouped.swift */; };
+		346BC76E29CCDE8100854BC9 /* KeyPathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC76D29CCDE8100854BC9 /* KeyPathExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,7 +75,7 @@
 		346BC73029C90BF400854BC9 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		346BC73429C90DE000854BC9 /* ContactListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListItem.swift; sourceTree = "<group>"; };
 		346BC73929C95A5200854BC9 /* RealmListSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmListSplitView.swift; sourceTree = "<group>"; };
-		346BC73B29C9625D00854BC9 /* RealmList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmList.swift; sourceTree = "<group>"; };
+		346BC73B29C9625D00854BC9 /* RealmListOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmListOld.swift; sourceTree = "<group>"; };
 		346BC73D29C965AE00854BC9 /* CanBeFavorited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanBeFavorited.swift; sourceTree = "<group>"; };
 		346BC73F29C9668F00854BC9 /* RealmListFavoriteGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmListFavoriteGroup.swift; sourceTree = "<group>"; };
 		346BC74129C9719500854BC9 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
@@ -79,6 +88,15 @@
 		346BC75029CA1E0500854BC9 /* DebugUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugUtil.swift; sourceTree = "<group>"; };
 		346BC75329CA1E4E00854BC9 /* RealmObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObjectExtension.swift; sourceTree = "<group>"; };
 		346BC75629CA2AD300854BC9 /* FormMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormMode.swift; sourceTree = "<group>"; };
+		346BC75929CB5B5200854BC9 /* DetailViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewText.swift; sourceTree = "<group>"; };
+		346BC75B29CB604800854BC9 /* DetailViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewList.swift; sourceTree = "<group>"; };
+		346BC75D29CB681E00854BC9 /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
+		346BC75F29CB8EDF00854BC9 /* DetailViewDatedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewDatedList.swift; sourceTree = "<group>"; };
+		346BC76129CB904200854BC9 /* DateAndDateFormatterExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndDateFormatterExtensions.swift; sourceTree = "<group>"; };
+		346BC76329CB906A00854BC9 /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
+		346BC76529CBCBC000854BC9 /* DetailViewActivityEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewActivityEventView.swift; sourceTree = "<group>"; };
+		346BC76B29CCC54700854BC9 /* RealmListGrouped.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmListGrouped.swift; sourceTree = "<group>"; };
+		346BC76D29CCDE8100854BC9 /* KeyPathExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPathExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				346BC74F29CA1DC900854BC9 /* Utility */,
-				346BC71229C8F7EE00854BC9 /* Views */,
 				346BC6DB29C8C37100854BC9 /* Model */,
+				346BC71229C8F7EE00854BC9 /* Views */,
 				346BC6CD29C8C35F00854BC9 /* Personal_Relationship_ManagementApp.swift */,
 				346BC6D129C8C36000854BC9 /* Assets.xcassets */,
 				346BC6D329C8C36000854BC9 /* Preview Content */,
@@ -244,7 +262,9 @@
 		346BC73729C95A2A00854BC9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				346BC75829CB5B3100854BC9 /* Detail View Components */,
 				346BC73829C95A2E00854BC9 /* Realm Split View */,
+				346BC75D29CB681E00854BC9 /* PlusButton.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -253,9 +273,10 @@
 			isa = PBXGroup;
 			children = (
 				346BC73929C95A5200854BC9 /* RealmListSplitView.swift */,
-				346BC73B29C9625D00854BC9 /* RealmList.swift */,
+				346BC73B29C9625D00854BC9 /* RealmListOld.swift */,
 				346BC74329CA047B00854BC9 /* RealmListSplitViewWithFavorites.swift */,
 				346BC73F29C9668F00854BC9 /* RealmListFavoriteGroup.swift */,
+				346BC76B29CCC54700854BC9 /* RealmListGrouped.swift */,
 			);
 			path = "Realm Split View";
 			sourceTree = "<group>";
@@ -274,6 +295,8 @@
 			isa = PBXGroup;
 			children = (
 				346BC75329CA1E4E00854BC9 /* RealmObjectExtension.swift */,
+				346BC76129CB904200854BC9 /* DateAndDateFormatterExtensions.swift */,
+				346BC76D29CCDE8100854BC9 /* KeyPathExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -282,8 +305,20 @@
 			isa = PBXGroup;
 			children = (
 				346BC75629CA2AD300854BC9 /* FormMode.swift */,
+				346BC76329CB906A00854BC9 /* DateFormat.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		346BC75829CB5B3100854BC9 /* Detail View Components */ = {
+			isa = PBXGroup;
+			children = (
+				346BC75929CB5B5200854BC9 /* DetailViewText.swift */,
+				346BC75B29CB604800854BC9 /* DetailViewList.swift */,
+				346BC75F29CB8EDF00854BC9 /* DetailViewDatedList.swift */,
+				346BC76529CBCBC000854BC9 /* DetailViewActivityEventView.swift */,
+			);
+			path = "Detail View Components";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,14 +399,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				346BC73E29C965AE00854BC9 /* CanBeFavorited.swift in Sources */,
+				346BC75E29CB681E00854BC9 /* PlusButton.swift in Sources */,
 				346BC71129C8F0FE00854BC9 /* Event.swift in Sources */,
 				346BC72429C8FFDC00854BC9 /* SettingsEntry.swift in Sources */,
+				346BC76E29CCDE8100854BC9 /* KeyPathExtension.swift in Sources */,
 				346BC71E29C8FFC100854BC9 /* ActivityEntry.swift in Sources */,
 				346BC74229C9719500854BC9 /* RealmHelper.swift in Sources */,
 				346BC71529C8F99C00854BC9 /* MainWindowTabs.swift in Sources */,
 				346BC72229C8FFD300854BC9 /* SourcesEntry.swift in Sources */,
 				346BC72729C9016B00854BC9 /* ActivitySource.swift in Sources */,
 				346BC6E029C8C37100854BC9 /* Address.swift in Sources */,
+				346BC76229CB904200854BC9 /* DateAndDateFormatterExtensions.swift in Sources */,
+				346BC75C29CB604800854BC9 /* DetailViewList.swift in Sources */,
+				346BC76429CB906A00854BC9 /* DateFormat.swift in Sources */,
 				346BC70D29C8E5D600854BC9 /* Activity.swift in Sources */,
 				346BC75429CA1E4E00854BC9 /* RealmObjectExtension.swift in Sources */,
 				346BC6EB29C8C59F00854BC9 /* Email.swift in Sources */,
@@ -379,11 +419,13 @@
 				346BC73129C90BF400854BC9 /* ContactView.swift in Sources */,
 				346BC73529C90DE000854BC9 /* ContactListItem.swift in Sources */,
 				346BC6E229C8C37100854BC9 /* Contact.swift in Sources */,
-				346BC73C29C9625D00854BC9 /* RealmList.swift in Sources */,
+				346BC73C29C9625D00854BC9 /* RealmListOld.swift in Sources */,
 				346BC75729CA2AD300854BC9 /* FormMode.swift in Sources */,
 				346BC74E29CA0EC700854BC9 /* ContactForm.swift in Sources */,
+				346BC75A29CB5B5200854BC9 /* DetailViewText.swift in Sources */,
 				346BC6E929C8C54000854BC9 /* PhoneNumber.swift in Sources */,
 				346BC74A29CA0A4B00854BC9 /* EventListItem.swift in Sources */,
+				346BC76629CBCBC000854BC9 /* DetailViewActivityEventView.swift in Sources */,
 				346BC74629CA05B300854BC9 /* ActivityListItem.swift in Sources */,
 				346BC74829CA078600854BC9 /* ActivityView.swift in Sources */,
 				346BC6CE29C8C35F00854BC9 /* Personal_Relationship_ManagementApp.swift in Sources */,
@@ -393,7 +435,9 @@
 				346BC74029C9668F00854BC9 /* RealmListFavoriteGroup.swift in Sources */,
 				346BC75129CA1E0500854BC9 /* DebugUtil.swift in Sources */,
 				346BC72029C8FFCB00854BC9 /* EventEntry.swift in Sources */,
+				346BC76029CB8EDF00854BC9 /* DetailViewDatedList.swift in Sources */,
 				346BC73A29C95A5200854BC9 /* RealmListSplitView.swift in Sources */,
+				346BC76C29CCC54700854BC9 /* RealmListGrouped.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

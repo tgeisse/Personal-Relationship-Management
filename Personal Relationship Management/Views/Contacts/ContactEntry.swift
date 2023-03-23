@@ -6,16 +6,17 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ContactEntry: View {
     @State private var addingContact = false
     
     var body: some View {
-        RealmListSplitView(singularTitle: "Contact",
-                           pluralTitle: "Contacts",
-                           listRowView: listItemView,
-                           detailView: detailView,
-                           addForm: addEntry)
+        RealmListSplitViewWithFavorites(singularTitle: "Contact",
+                                        pluralTitle: "Contacts",
+                                        listRowView: listItemView,
+                                        detailView: detailView,
+                                        addForm: addEntry)
     }
     
     private func listItemView(_ contact: Contact) -> some View {

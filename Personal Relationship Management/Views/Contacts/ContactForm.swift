@@ -12,6 +12,17 @@ struct ContactForm: View {
     @ObservedRealmObject var contact: Contact
     var formMode: FormMode
     
+    init(contact: Contact, formMode: FormMode) {
+        self.formMode = formMode
+        
+        if contact.isFrozen {
+            DebugUtil.print("Thawing the contact")
+            self.contact = contact.thaw()!
+        } else {
+            self.contact = contact
+        }
+    }
+    
     @Environment(\.dismiss) private var dismiss
     @Environment(\.realm) private var realm
     
@@ -19,8 +30,10 @@ struct ContactForm: View {
         NavigationView {
             Text(contact.fullName)
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button("Cancel") { dismiss() }
+                    if formMode == .adding {
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            Button("Cancel") { dismiss() }
+                        }
                     }
                     
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -30,14 +43,25 @@ struct ContactForm: View {
                                     realm.add(contact)
                                 }
                             }
+                            
+                            if formMode == .editing {
+                                let test = contact.thaw()!
+                                
+                                try! test.realm!.write {
+                                    test.firstName = "test"
+                                }
+                            }
+                            
                             dismiss()
                         }
                     }
                 }
         }
         .onAppear {
-            contact.firstName = "Taylor"
-            contact.lastName = "Geisse"
+            if formMode == .adding {
+                contact.firstName = "Taylor"
+                contact.lastName = "Geisse"
+            }
         }
     }
 }
