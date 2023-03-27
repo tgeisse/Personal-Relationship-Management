@@ -12,6 +12,8 @@ struct ContactForm: View {
     @ObservedRealmObject var contact: Contact
     var formMode: FormMode
     
+   // @Environment(\.horizontalSizeClass) private var horizontalSize
+    
     init(contact: Contact, formMode: FormMode) {
         self.formMode = formMode
         
@@ -23,45 +25,19 @@ struct ContactForm: View {
         }
     }
     
-    @Environment(\.dismiss) private var dismiss
-    @Environment(\.realm) private var realm
-    
     var body: some View {
         NavigationView {
-            Text(contact.fullName)
-                .toolbar {
-                    if formMode == .adding {
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            Button("Cancel") { dismiss() }
-                        }
-                    }
-                    
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button("Save") {
-                            if formMode == .adding {
-                                try! realm.write {
-                                    realm.add(contact)
-                                }
-                            }
-                            
-                            if formMode == .editing {
-                                let test = contact.thaw()!
-                                
-                                try! test.realm!.write {
-                                    test.firstName = "test"
-                                }
-                            }
-                            
-                            dismiss()
-                        }
-                    }
-                }
+            contactForm
+                .cancelSaveDoneToolbar(formMode: formMode, object: contact)
         }
-        .onAppear {
-            if formMode == .adding {
-                contact.firstName = "Taylor"
-                contact.lastName = "Geisse"
-            }
+    }
+    
+    private var contactForm: some View {
+        Form {
+            TextFieldWithLabel("First Name", text: $contact.firstName)
+            TextFieldWithLabel("Last Name", text: $contact.lastName)
+            TextFieldWithLabel("Notes", text: $contact.notes)
+                //.lineLimit(horizontalSize == .compact ? 8 : 5)
         }
     }
 }

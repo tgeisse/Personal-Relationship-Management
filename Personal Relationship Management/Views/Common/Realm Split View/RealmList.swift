@@ -8,7 +8,7 @@
 import SwiftUI
 import RealmSwift
 
-struct RealmListOld<RealmObject: Object & Identifiable, RowView: View>: View {
+struct RealmList<RealmObject: Object & Identifiable, RowView: View>: View {
     @ObservedResults(RealmObject.self) var listItems
     
     var pluralTitle: String
@@ -23,17 +23,22 @@ struct RealmListOld<RealmObject: Object & Identifiable, RowView: View>: View {
                 ForEach(listItems, id: \.self) { item in
                     rowView(item)
                 }
-                .onDelete(perform: $listItems.remove)
+                .onDelete { remove(fromList: $listItems, atIndex: $0) }
             }
         }
         .navigationTitle(pluralTitle)
     }
+    
+    private func remove(fromList list: ObservedResults<RealmObject>, atIndex: IndexSet) {
+        selectedItem = nil
+        list.remove(atOffsets: atIndex)
+    }
 }
 
 #if DEBUG
-struct RealmListOld_Previews: PreviewProvider {
+struct RealmList_Previews: PreviewProvider {
     static var previews: some View {
-        RealmListOld(pluralTitle: "Contacts",
+        RealmList(pluralTitle: "Contacts",
                   selectedItem: .constant(nil),
                   rowView: { (c: Contact) in Text(c.fullName) })
     }

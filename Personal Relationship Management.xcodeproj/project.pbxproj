@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34386F8429CD624400ED2328 /* TextFieldWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34386F8329CD624400ED2328 /* TextFieldWithLabel.swift */; };
+		34386F8D29D158F300ED2328 /* FormToolbarViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34386F8C29D158F300ED2328 /* FormToolbarViewModifier.swift */; };
 		346BC6CE29C8C35F00854BC9 /* Personal_Relationship_ManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC6CD29C8C35F00854BC9 /* Personal_Relationship_ManagementApp.swift */; };
 		346BC6D229C8C36000854BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 346BC6D129C8C36000854BC9 /* Assets.xcassets */; };
 		346BC6D529C8C36000854BC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 346BC6D429C8C36000854BC9 /* Preview Assets.xcassets */; };
@@ -29,7 +31,7 @@
 		346BC73129C90BF400854BC9 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC73029C90BF400854BC9 /* ContactView.swift */; };
 		346BC73529C90DE000854BC9 /* ContactListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC73429C90DE000854BC9 /* ContactListItem.swift */; };
 		346BC73A29C95A5200854BC9 /* RealmListSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC73929C95A5200854BC9 /* RealmListSplitView.swift */; };
-		346BC73C29C9625D00854BC9 /* RealmListOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC73B29C9625D00854BC9 /* RealmListOld.swift */; };
+		346BC73C29C9625D00854BC9 /* RealmList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC73B29C9625D00854BC9 /* RealmList.swift */; };
 		346BC73E29C965AE00854BC9 /* CanBeFavorited.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC73D29C965AE00854BC9 /* CanBeFavorited.swift */; };
 		346BC74029C9668F00854BC9 /* RealmListFavoriteGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC73F29C9668F00854BC9 /* RealmListFavoriteGroup.swift */; };
 		346BC74229C9719500854BC9 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC74129C9719500854BC9 /* RealmHelper.swift */; };
@@ -51,9 +53,12 @@
 		346BC76629CBCBC000854BC9 /* DetailViewActivityEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC76529CBCBC000854BC9 /* DetailViewActivityEventView.swift */; };
 		346BC76C29CCC54700854BC9 /* RealmListGrouped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC76B29CCC54700854BC9 /* RealmListGrouped.swift */; };
 		346BC76E29CCDE8100854BC9 /* KeyPathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC76D29CCDE8100854BC9 /* KeyPathExtension.swift */; };
+		346BC77029CD15A300854BC9 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BC76F29CD15A300854BC9 /* FavoriteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34386F8329CD624400ED2328 /* TextFieldWithLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithLabel.swift; sourceTree = "<group>"; };
+		34386F8C29D158F300ED2328 /* FormToolbarViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormToolbarViewModifier.swift; sourceTree = "<group>"; };
 		346BC6CA29C8C35F00854BC9 /* Personal Relationship Management.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Personal Relationship Management.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		346BC6CD29C8C35F00854BC9 /* Personal_Relationship_ManagementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personal_Relationship_ManagementApp.swift; sourceTree = "<group>"; };
 		346BC6D129C8C36000854BC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,7 +80,7 @@
 		346BC73029C90BF400854BC9 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		346BC73429C90DE000854BC9 /* ContactListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListItem.swift; sourceTree = "<group>"; };
 		346BC73929C95A5200854BC9 /* RealmListSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmListSplitView.swift; sourceTree = "<group>"; };
-		346BC73B29C9625D00854BC9 /* RealmListOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmListOld.swift; sourceTree = "<group>"; };
+		346BC73B29C9625D00854BC9 /* RealmList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmList.swift; sourceTree = "<group>"; };
 		346BC73D29C965AE00854BC9 /* CanBeFavorited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanBeFavorited.swift; sourceTree = "<group>"; };
 		346BC73F29C9668F00854BC9 /* RealmListFavoriteGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmListFavoriteGroup.swift; sourceTree = "<group>"; };
 		346BC74129C9719500854BC9 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
@@ -97,6 +102,7 @@
 		346BC76529CBCBC000854BC9 /* DetailViewActivityEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewActivityEventView.swift; sourceTree = "<group>"; };
 		346BC76B29CCC54700854BC9 /* RealmListGrouped.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmListGrouped.swift; sourceTree = "<group>"; };
 		346BC76D29CCDE8100854BC9 /* KeyPathExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPathExtension.swift; sourceTree = "<group>"; };
+		346BC76F29CD15A300854BC9 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34386F8B29D158DA00ED2328 /* View Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				34386F8C29D158F300ED2328 /* FormToolbarViewModifier.swift */,
+			);
+			path = "View Modifiers";
+			sourceTree = "<group>";
+		};
 		346BC6C129C8C35F00854BC9 = {
 			isa = PBXGroup;
 			children = (
@@ -262,9 +276,12 @@
 		346BC73729C95A2A00854BC9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				34386F8B29D158DA00ED2328 /* View Modifiers */,
 				346BC75829CB5B3100854BC9 /* Detail View Components */,
 				346BC73829C95A2E00854BC9 /* Realm Split View */,
 				346BC75D29CB681E00854BC9 /* PlusButton.swift */,
+				346BC76F29CD15A300854BC9 /* FavoriteButton.swift */,
+				34386F8329CD624400ED2328 /* TextFieldWithLabel.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -273,7 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				346BC73929C95A5200854BC9 /* RealmListSplitView.swift */,
-				346BC73B29C9625D00854BC9 /* RealmListOld.swift */,
+				346BC73B29C9625D00854BC9 /* RealmList.swift */,
 				346BC74329CA047B00854BC9 /* RealmListSplitViewWithFavorites.swift */,
 				346BC73F29C9668F00854BC9 /* RealmListFavoriteGroup.swift */,
 				346BC76B29CCC54700854BC9 /* RealmListGrouped.swift */,
@@ -400,6 +417,7 @@
 			files = (
 				346BC73E29C965AE00854BC9 /* CanBeFavorited.swift in Sources */,
 				346BC75E29CB681E00854BC9 /* PlusButton.swift in Sources */,
+				34386F8429CD624400ED2328 /* TextFieldWithLabel.swift in Sources */,
 				346BC71129C8F0FE00854BC9 /* Event.swift in Sources */,
 				346BC72429C8FFDC00854BC9 /* SettingsEntry.swift in Sources */,
 				346BC76E29CCDE8100854BC9 /* KeyPathExtension.swift in Sources */,
@@ -411,15 +429,17 @@
 				346BC6E029C8C37100854BC9 /* Address.swift in Sources */,
 				346BC76229CB904200854BC9 /* DateAndDateFormatterExtensions.swift in Sources */,
 				346BC75C29CB604800854BC9 /* DetailViewList.swift in Sources */,
+				34386F8D29D158F300ED2328 /* FormToolbarViewModifier.swift in Sources */,
 				346BC76429CB906A00854BC9 /* DateFormat.swift in Sources */,
 				346BC70D29C8E5D600854BC9 /* Activity.swift in Sources */,
 				346BC75429CA1E4E00854BC9 /* RealmObjectExtension.swift in Sources */,
 				346BC6EB29C8C59F00854BC9 /* Email.swift in Sources */,
 				346BC74429CA047B00854BC9 /* RealmListSplitViewWithFavorites.swift in Sources */,
+				346BC77029CD15A300854BC9 /* FavoriteButton.swift in Sources */,
 				346BC73129C90BF400854BC9 /* ContactView.swift in Sources */,
 				346BC73529C90DE000854BC9 /* ContactListItem.swift in Sources */,
 				346BC6E229C8C37100854BC9 /* Contact.swift in Sources */,
-				346BC73C29C9625D00854BC9 /* RealmListOld.swift in Sources */,
+				346BC73C29C9625D00854BC9 /* RealmList.swift in Sources */,
 				346BC75729CA2AD300854BC9 /* FormMode.swift in Sources */,
 				346BC74E29CA0EC700854BC9 /* ContactForm.swift in Sources */,
 				346BC75A29CB5B5200854BC9 /* DetailViewText.swift in Sources */,

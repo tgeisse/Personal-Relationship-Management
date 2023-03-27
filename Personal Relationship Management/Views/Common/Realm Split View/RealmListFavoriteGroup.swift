@@ -10,8 +10,8 @@ import RealmSwift
 
 struct RealmListFavoriteGroup<RealmObject: Object & Identifiable & CanBeFavorited, RowView: View>: View {
     
-    @ObservedResults(RealmObject.self, where: { $0.isFavorite == true }) private var favorites
-    @ObservedResults(RealmObject.self) private var allItems
+    @ObservedResults(RealmObject.self, where: { $0.isFavorite == true }) private var favoriteItems
+    @ObservedResults(RealmObject.self, where: { $0.isFavorite != true }) private var nonFavoriteItems
     
     /*
     @ObservedSectionedResults(RealmObject.self,
@@ -25,39 +25,34 @@ struct RealmListFavoriteGroup<RealmObject: Object & Identifiable & CanBeFavorite
     
     var body: some View {
         List(selection: $selectedItem) {
-            if allItems.isEmpty {
+            if nonFavoriteItems.isEmpty && favoriteItems.isEmpty {
                 Text("No \(pluralTitle) here!")
             } else {
                 // favorites section first
                 Section("Favorites") {
-                    ForEach(favorites, id: \.self) { item in
+                    ForEach(favoriteItems, id: \.self) { item in
                         rowView(item)
                     }
-                    .onDelete(perform: $favorites.remove)
+                    .onDelete { remove(fromList: $favoriteItems, atIndex: $0) }
                 }
                 
                 // all items section second
                 Section("All \(pluralTitle)") {
-                    ForEach(allItems, id: \.self) { item in
+                    ForEach(nonFavoriteItems, id: \.self) { item in
                         rowView(item)
                     }
-                    .onDelete(perform: $allItems.remove)
+                    .onDelete { remove(fromList: $nonFavoriteItems, atIndex: $0) }
                 }
             }
-            
-            /*
-            ForEach(listItems) { section in
-                Section(header: Text(section.key == true ? "Favorites" : "")) {
-                    ForEach(section, id: \.self) { item in
-                        rowView(item)
-                    }
-                    //.onDelete { remove(sectionKey: section.key, atIndex: $0) }
-                }
-            }
-             */
         }
         .navigationTitle(pluralTitle)
+        .animation(.easeOut, value: favoriteItems.count)
        // .listStyle(.grouped)
+    }
+    
+    private func remove(fromList list: ObservedResults<RealmObject>, atIndex: IndexSet) {
+        selectedItem = nil
+        list.remove(atOffsets: atIndex)
     }
     
     private func remove(sectionKey: Bool, atIndex: IndexSet?) {

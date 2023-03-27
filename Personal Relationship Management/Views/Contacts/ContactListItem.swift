@@ -13,7 +13,14 @@ struct ContactListItem: View {
     @State private var hide = false
     
     var body: some View {
-        Text(contact.fullName)
+        HStack {
+            Text(contact.fullName)
+            
+            Spacer()
+            
+            FavoriteButton(isFavorite: $contact.isFavorite)
+                .buttonStyle(.plain)
+        }
     }
 }
 

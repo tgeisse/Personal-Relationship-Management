@@ -53,7 +53,7 @@ struct RealmListSplitView<RealmObject: Object & Identifiable, Sidebar: View, Det
     }
     
     private var listView: some View {
-        RealmListOld(pluralTitle: pluralTitle,
+        RealmList(pluralTitle: pluralTitle,
                   selectedItem: $selectedItem,
                   rowView: listRowView)
     }

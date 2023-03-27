@@ -22,6 +22,9 @@ struct ContactView: View {
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
+                FavoriteButton(isFavorite: $contact.isFavorite)
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
                 Button("Edit") { editing.toggle() }
                     .sheet(isPresented: $editing, content: editingView)
             }
